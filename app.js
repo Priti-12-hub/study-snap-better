@@ -5,6 +5,11 @@ const formatButtons = document.querySelectorAll('.format-btn');
 const startButton = document.getElementById('start-demo');
 const pricingButton = document.getElementById('show-pricing');
 const shareAccess = document.getElementById('shareAccess');
+const navItems = document.querySelectorAll('.nav-item');
+const screens = document.querySelectorAll('.screen');
+const revealButton = document.querySelector('.answer-row .ghost-btn');
+const flashcardText = document.querySelector('.flashcard p');
+const primaryPracticeButton = document.querySelector('.answer-row .primary-btn');
 
 function scrollToSection(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -49,6 +54,36 @@ document.getElementById('generate')?.addEventListener('click', () => {
 
   resultBox.hidden = false;
   resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
+
+navItems.forEach((button) => {
+  button.addEventListener('click', () => {
+    const screen = button.dataset.screen;
+
+    navItems.forEach((item) => item.classList.toggle('active', item === button));
+    screens.forEach((panel) => {
+      panel.classList.toggle('active', panel.id === `screen-${screen}`);
+    });
+  });
+});
+
+let flashcardRevealed = false;
+
+revealButton?.addEventListener('click', () => {
+  flashcardRevealed = !flashcardRevealed;
+  if (flashcardRevealed) {
+    flashcardText.textContent = 'Answer: ATP, the usable energy currency of the cell.';
+    revealButton.textContent = 'Hide answer';
+  } else {
+    flashcardText.textContent = 'Think first, then reveal the answer.';
+    revealButton.textContent = 'Reveal answer';
+  }
+});
+
+primaryPracticeButton?.addEventListener('click', () => {
+  flashcardRevealed = false;
+  flashcardText.textContent = 'Think first, then reveal the answer.';
+  revealButton.textContent = 'Reveal answer';
 });
 
 shareAccess?.addEventListener('click', async () => {
