@@ -3,99 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="StudySnap turns scattered notes, PDFs, and revision time into focus, clarity, and confident learning." />
-    <title>StudySnap — Stop rereading. Start retaining.</title>
+    <title>StudySnap | MVP</title>
+    <meta name="description" content="StudySnap turns notes into study packs, flashcards, and quizzes." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="announcement">
-      <span>✦</span>
-      Built for students who want less stress and more recall.
-      <button data-scroll="workspace">Try the free study sprint →</button>
-    </div>
+    <div class="topbar">Need help learning faster? Start with a 5-minute study sprint.</div>
 
     <nav class="nav shell">
-      <a class="brand" href="#top"><span class="brand-mark">✦</span> Study<span>Snap</span></a>
+      <div class="brand-wrap">
+        <div class="brand-mark">✦</div>
+        <div class="brand-text">Study<span>Snap</span></div>
+      </div>
       <div class="nav-links">
-        <a href="#problem">Why it matters</a>
-        <a href="#how">How it works</a>
-        <a href="#features">Benefits</a>
+        <a href="#features">Features</a>
+        <a href="#workflow">How it works</a>
         <a href="#pricing">Pricing</a>
       </div>
-      <button class="button button-small button-dark" data-scroll="workspace">Start free</button>
-      <button class="menu" aria-label="Open menu">☰</button>
+      <div class="nav-actions">
+        <button class="ghost-btn">Log in</button>
+        <button class="primary-btn">Get started</button>
+      </div>
     </nav>
 
-    <main id="top">
+    <main>
       <section class="hero shell">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="pulse"></span> Less overwhelm. More confident learning.</div>
-          <h1>Stop rereading. Start <em>retaining.</em></h1>
-          <p class="hero-lede">
-            StudySnap turns your notes, PDFs, and revision material into a focused study system—clear summaries,
-            active recall, and practice that actually matches how you learn.
+          <div class="eyebrow">Less stress. More recall.</div>
+          <h1>Turn notes into a study system that actually helps you remember.</h1>
+          <p>
+            StudySnap turns your notes, PDFs, and questions into flashcards, summaries,
+            and quizzes so you can learn faster and review smarter.
           </p>
-          <div class="hero-actions">
-            <button class="button button-primary" data-scroll="workspace">Create my study pack <span>↗</span></button>
-            <a class="text-link" href="#how">See how it works <span>↓</span></a>
+          <div class="cta-row">
+            <button class="primary-btn" id="start-demo">Create my study pack</button>
+            <button class="secondary-btn" id="show-pricing">See pricing</button>
           </div>
-
-          <div class="trust-row">
-            <div class="avatars"><span>AM</span><span>JR</span><span>SK</span><span>+2k</span></div>
-            <div>
-              <strong>Used by students who want real momentum</strong>
-              <small>Free to start · no pressure to upgrade</small>
+          <div class="hero-social-proof">
+            <div class="avatars">
+              <span>A</span>
+              <span>J</span>
+              <span>S</span>
+              <span>+2k</span>
+            </div>
+            <div class="proof-text">
+              <strong>Trusted by students who want clarity</strong>
+              <small>Free to begin • No pressure</small>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="StudySnap dashboard preview">
-          <div class="glow"></div>
-          <div class="floating-note note-one">✦ 12 min well spent</div>
-          <div class="floating-note note-two">✓ 3 weak spots found</div>
-
-          <div class="app-window">
-            <div class="window-top">
-              <span class="brand mini"><span class="brand-mark">✦</span> StudySnap</span>
-              <span class="window-dots">• • •</span>
+        <div class="hero-visual">
+          <div class="dashboard-card">
+            <div class="mini-header">
+              <span class="dot green"></span>
+              <span class="mini-brand">StudySnap</span>
+              <span class="mini-pill">Live</span>
             </div>
-            <div class="window-body">
-              <div class="window-greeting">Good afternoon, Maya <span>✦</span><small>Build confidence one study win at a time.</small></div>
-
-              <div class="progress-card">
-                <div>
-                  <small>Today’s momentum</small>
+            <div class="dashboard-body">
+              <div class="summary-box">
+                <small>Today’s focus</small>
+                <h3>Biology revision</h3>
+                <div class="progress-wrap">
+                  <div class="progress-bar"><span></span></div>
                   <strong>68%</strong>
-                  <p>12 of 18 concepts feeling solid</p>
                 </div>
-                <div class="ring"><span>68</span></div>
               </div>
 
-              <div class="next-card">
-                <div class="icon violet">⚡</div>
+              <div class="quick-stack">
+                <div class="stack-item">
+                  <small>Flashcards</small>
+                  <strong>18 cards</strong>
+                </div>
+                <div class="stack-item">
+                  <small>Quiz</small>
+                  <strong>5 questions</strong>
+                </div>
+              </div>
+
+              <div class="next-step">
+                <div class="icon-wrap">⚡</div>
                 <div>
-                  <small>Recommended next</small>
+                  <small>Next best step</small>
                   <strong>Review cellular respiration</strong>
-                  <p>6 quick questions · ~8 min</p>
-                </div>
-                <span class="arrow">→</span>
-              </div>
-
-              <div class="mini-grid">
-                <div>
-                  <small>Study streak</small>
-                  <strong>7 <i>days</i></strong>
-                  <div class="bars">
-                    <b></b><b></b><b></b><b></b><b></b><b></b><b></b>
-                  </div>
-                </div>
-                <div>
-                  <small>Confidence</small>
-                  <strong>Rising <i>↑</i></strong>
-                  <p class="green">+18% this week</p>
                 </div>
               </div>
             </div>
@@ -103,226 +96,138 @@
         </div>
       </section>
 
-      <section class="proof">
-        <div class="shell proof-inner">
-          <p>Less rereading. More recall.</p>
-          <div>
-            <span>⌁ Clearer revision</span>
-            <span>◉ Built around how you learn</span>
-            <span>↗ Motivation that lasts</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section shell" id="problem">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow">THE PROBLEM</div>
-            <h2>Most students are not lazy.<br />They are <em>overwhelmed.</em></h2>
-          </div>
-          <p>Too many notes. Too much content. Not enough clarity. StudySnap helps turn pressure into progress.</p>
-        </div>
-
-        <div class="pain-grid">
-          <article>
-            <span>01</span>
-            <h3>Information overload</h3>
-            <p>You read more, remember less, and still feel behind before the exam.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Weak revision methods</h3>
-            <p>Highlighting and rereading can feel productive but rarely build real recall.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>No clear next step</h3>
-            <p>Without a plan, every study session becomes a guess, and every guess hurts confidence.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section shell" id="how">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow">HOW IT WORKS</div>
-            <h2>A calm, useful rhythm<br />for studying.</h2>
-          </div>
-          <p>StudySnap replaces the blank-page feeling with a focused loop that helps you learn, test, and remember.</p>
-        </div>
-
-        <div class="steps">
-          <article>
-            <div class="step-number">01</div>
-            <div class="step-icon">⌁</div>
-            <h3>Bring your material</h3>
-            <p>Paste notes, upload a PDF, or drop in a photo of a page. No complicated setup.</p>
-          </article>
-          <article class="active-step">
-            <div class="step-number">02</div>
-            <div class="step-icon">✦</div>
-            <h3>Get what matters</h3>
-            <p>We surface the key ideas, definitions, gaps, and questions worth your time.</p>
-          </article>
-          <article>
-            <div class="step-number">03</div>
-            <div class="step-icon">↗</div>
-            <h3>Build recall</h3>
-            <p>Practice, review, and improve through useful repetition instead of passive rereading.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="workspace-section" id="workspace">
-        <div class="shell workspace">
-          <div class="workspace-intro">
-            <div class="eyebrow">YOUR FIRST WIN</div>
-            <h2>Make something useful<br /><em>in under two minutes.</em></h2>
-            <p>Try the free study preview and see how quickly a messy set of notes becomes a clear plan.</p>
-
-            <div class="benefit-list">
-              <div>
-                <span>✓</span>
-                <p><strong>Clear focus</strong><small>Know exactly what matters most.</small></p>
-              </div>
-              <div>
-                <span>✓</span>
-                <p><strong>Better recall</strong><small>Practice with active recall, not passive reading.</small></p>
-              </div>
-              <div>
-                <span>✓</span>
-                <p><strong>Progress that sticks</strong><small>Build momentum you can feel.</small></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="generator-card">
-            <div class="card-header">
-              <div><span class="status-dot"></span> Study pack creator</div>
-              <span class="free-pill">FREE PREVIEW</span>
-            </div>
-
-            <label for="notes">Paste a few notes or test with our sample</label>
-            <textarea id="notes" placeholder="Paste notes here… e.g. The mitochondria is the powerhouse of the cell because it produces ATP."></textarea>
-
-            <div class="format-row">
-              <button class="format active" data-format="Focus pack">✦ Focus pack</button>
-              <button class="format" data-format="Flashcards">▣ Flashcards</button>
-              <button class="format" data-format="Quiz">◇ Quiz me</button>
-            </div>
-
-            <button class="button button-primary full" id="generate">Create my study pack <span>↗</span></button>
-
-            <div class="result" id="result" hidden>
-              <div class="result-title"><span>✦</span> Your focus pack is ready</div>
-              <div class="result-content" id="result-content"></div>
-              <button class="text-link" data-scroll="pricing">Save this pack and keep your momentum →</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section shell" id="features">
-        <div class="section-heading centered">
-          <div>
-            <div class="eyebrow">WHY PEOPLE PAY</div>
-            <h2>Because confidence is worth <em>more</em> than a generic AI tool.</h2>
-          </div>
-          <p>People stay for the feeling of clarity and the system they can rely on when the pressure is high.</p>
+      <section class="features shell" id="features">
+        <div class="section-title">
+          <div class="eyebrow">Why it works</div>
+          <h2>Simple enough to use every day. Useful enough to keep.</h2>
         </div>
 
         <div class="feature-grid">
-          <article class="feature large">
-            <span class="feature-icon">◌</span>
-            <h3>Adaptive learning</h3>
-            <p>Practice focuses on your weak points instead of wasting time on what you already know.</p>
-            <div class="mock-chart">
-              <span style="height:35%"></span>
-              <span style="height:52%"></span>
-              <span style="height:44%"></span>
-              <span style="height:72%"></span>
-              <span style="height:65%"></span>
-              <span style="height:90%"></span>
-            </div>
+          <article class="feature-card">
+            <div class="feature-icon">⌁</div>
+            <h3>Capture fast</h3>
+            <p>Paste notes, upload PDFs, or take a photo of a page. One tap, no setup friction.</p>
           </article>
-
-          <article class="feature">
-            <span class="feature-icon violet-bg">✦</span>
-            <h3>Understand faster</h3>
-            <p>Ask for a simpler explanation, a harder question, or a concept analogy in seconds.</p>
-            <div class="quote">“Explain it like I’m teaching a friend.”</div>
+          <article class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3>Turn into practice</h3>
+            <p>Turn material into summaries, flashcards, and quick quizzes without extra effort.</p>
           </article>
-
-          <article class="feature">
-            <span class="feature-icon orange-bg">♡</span>
-            <h3>Stay consistent</h3>
-            <p>Daily momentum, gentle reminders, and a personal revision path helps you keep going.</p>
-            <div class="streak">7 <small>day streak</small> <span>✦</span></div>
+          <article class="feature-card">
+            <div class="feature-icon">↗</div>
+            <h3>Track progress</h3>
+            <p>See what you know, what needs work, and what to revise next so you stay focused.</p>
           </article>
         </div>
       </section>
 
-      <section class="social-proof">
-        <div class="shell proof-grid">
-          <article>
-            <div class="stars">★★★★★</div>
-            <p>“The app made my revision feel organized for the first time. I stopped panicking and started actually learning.”</p>
-            <strong>— S. R., Biology student</strong>
-          </article>
-          <article>
-            <div class="stars">★★★★★</div>
-            <p>“I used it before an exam and it made the most important ideas obvious. It felt like a coach, not a chatbot.”</p>
-            <strong>— M. A., final-year student</strong>
-          </article>
-          <article>
-            <div class="stars">★★★★★</div>
-            <p>“I paid for it because it saved time and made me feel prepared. It was worth it.”</p>
-            <strong>— J. T., law student</strong>
-          </article>
+      <section class="workflow shell" id="workflow">
+        <div class="section-title left-title">
+          <div class="eyebrow">How it works</div>
+          <h2>One clear study loop.</h2>
         </div>
-      </section>
 
-      <section class="pricing-section" id="pricing">
-        <div class="shell pricing">
-          <div class="eyebrow">SAVE YOUR STRESS</div>
-          <h2>Free to try.<br /><em>Built to stay.</em></h2>
-          <p>Start with a free preview. Upgrade only when you want a serious study system that keeps working for you.</p>
-
-          <div class="plans">
-            <div class="plan">
-              <h3>Starter</h3>
-              <p>For trying a smarter way to revise.</p>
-              <div class="price">$0 <small>forever</small></div>
-              <ul>
-                <li>3 study packs / month</li>
-                <li>Summary + flashcard tool</li>
-                <li>7-day progress history</li>
-              </ul>
-              <button class="button button-outline">Start for free</button>
-            </div>
-
-            <div class="plan featured">
-              <div class="popular">MOST LOVED</div>
-              <h3>Focus</h3>
-              <p>For students who want calm, structure, and results.</p>
-              <div class="price">$8 <small>/ month</small></div>
-              <ul>
-                <li>Unlimited study packs</li>
-                <li>Adaptive quizzes + review loops</li>
-                <li>Progress tracking and weak-topic map</li>
-                <li>PDF, image, and export support</li>
-              </ul>
-              <button class="button button-primary">Start 7-day free trial</button>
-              <small class="fine-print">No hidden fees. Cancel anytime.</small>
-            </div>
+        <div class="steps">
+          <div class="step-card">
+            <span>01</span>
+            <h3>Upload material</h3>
+            <p>Notes, textbook pages, screenshots, or PDFs.</p>
           </div>
+          <div class="step-card active">
+            <span>02</span>
+            <h3>Generate study pack</h3>
+            <p>Get a summary, key points, flashcards, and a quiz.</p>
+          </div>
+          <div class="step-card">
+            <span>03</span>
+            <h3>Review and improve</h3>
+            <p>Practice recall, strengthen weak spots, and build confidence.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace shell" id="workspace">
+        <div class="workspace-copy">
+          <div class="eyebrow">Your first study pack</div>
+          <h2>Create something useful in under 2 minutes.</h2>
+          <p>Test the workflow with sample notes and see how quickly it turns into something study-ready.</p>
+        </div>
+
+        <div class="workspace-card">
+          <div class="card-top">
+            <span class="dot green"></span>
+            <span>Study pack generator</span>
+            <span class="mini-tag">Free preview</span>
+          </div>
+
+          <label for="notes">Paste your notes</label>
+          <textarea id="notes" rows="8">The mitochondria is the powerhouse of the cell because it produces ATP. Cellular respiration has three main stages: glycolysis, the Krebs cycle, and the electron transport chain. Oxygen is the final electron acceptor.</textarea>
+
+          <div class="format-row">
+            <button class="format-btn active" data-mode="summary">Summary</button>
+            <button class="format-btn" data-mode="flashcards">Flashcards</button>
+            <button class="format-btn" data-mode="quiz">Quiz</button>
+          </div>
+
+          <button class="primary-btn full" id="generate">Create study pack</button>
+
+          <div class="result-box" id="resultBox" hidden>
+            <div class="result-title">Generated result</div>
+            <div id="resultContent"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing shell" id="pricing">
+        <div class="section-title centered">
+          <div class="eyebrow">Pricing</div>
+          <h2>Free to start. Worth staying for.</h2>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Starter</h3>
+            <div class="price">$0 <span>forever</span></div>
+            <ul>
+              <li>3 study packs / month</li>
+              <li>Summary + flashcards</li>
+              <li>Basic progress</li>
+            </ul>
+            <button class="ghost-btn full">Try free</button>
+          </div>
+
+          <div class="price-card featured">
+            <div class="popular-badge">Most popular</div>
+            <h3>Focus</h3>
+            <div class="price">$8 <span>/ month</span></div>
+            <ul>
+              <li>Unlimited study packs</li>
+              <li>Adaptive review</li>
+              <li>Detailed progress tracking</li>
+              <li>PDF + image support</li>
+            </ul>
+            <button class="primary-btn full">Start free trial</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="access shell">
+        <div class="access-card">
+          <div>
+            <div class="eyebrow">Access for all</div>
+            <h3>Can’t pay yet? Share with someone who would benefit.</h3>
+            <p>Optional referrals can unlock premium access for eligible students without removing the free option.</p>
+          </div>
+          <button class="primary-btn" id="shareAccess">Get invite link</button>
         </div>
       </section>
     </main>
 
     <footer class="footer shell">
-      <a class="brand" href="#top"><span class="brand-mark">✦</span> Study<span>Snap</span></a>
-      <p>Build confidence, one small study win at a time.</p>
+      <div class="brand-wrap">
+        <div class="brand-mark">✦</div>
+        <div class="brand-text">Study<span>Snap</span></div>
+      </div>
       <span>© 2026 StudySnap</span>
     </footer>
 
