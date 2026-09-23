@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="StudySnap turns your notes into a focused study plan, useful practice, and confidence that lasts." />
+    <title>StudySnap — Study smarter, feel ready</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement"><span>✦</span> Your next study win is closer than you think <button data-scroll="workspace">Try the 2-minute study sprint →</button></div>
+    <nav class="nav shell">
+      <a class="brand" href="#top"><span class="brand-mark">✦</span> Study<span>Snap</span></a>
+      <div class="nav-links"><a href="#how">How it works</a><a href="#features">Why StudySnap</a><a href="#pricing">Pricing</a></div>
+      <button class="button button-small button-dark" data-scroll="workspace">Start free</button>
+      <button class="menu" aria-label="Open menu">☰</button>
+    </nav>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> Built for the moment before “I’m not ready”</div>
+          <h1>Turn study stress into <em>“I’ve got this.”</em></h1>
+          <p class="hero-lede">Drop in your notes. StudySnap finds what matters, makes it memorable, and gives you a clear next step—so every session feels like progress.</p>
+          <div class="hero-actions"><button class="button button-primary" data-scroll="workspace">Make my study pack <span>↗</span></button><a class="text-link" href="#how">See how it works <span>↓</span></a></div>
+          <div class="trust-row"><div class="avatars"><span>AM</span><span>JR</span><span>SK</span><span>+2k</span></div><div><strong>Loved by ambitious learners</strong><small>Start free · no credit card</small></div></div>
+        </div>
+        <div class="hero-visual" aria-label="StudySnap dashboard preview">
+          <div class="glow"></div><div class="floating-note note-one">✦ 12 min well spent</div><div class="floating-note note-two">✓ 3 weak spots found</div>
+          <div class="app-window"><div class="window-top"><span class="brand mini"><span class="brand-mark">✦</span> StudySnap</span><span class="window-dots">• • •</span></div><div class="window-body"><div class="window-greeting">Good afternoon, Maya <span>✦</span><small>Small steps. Big recall.</small></div><div class="progress-card"><div><small>Today’s momentum</small><strong>68%</strong><p>12 of 18 concepts feeling solid</p></div><div class="ring"><span>68</span></div></div><div class="next-card"><div class="icon violet">⚡</div><div><small>Recommended next</small><strong>Review cellular respiration</strong><p>6 quick questions · ~8 min</p></div><span class="arrow">→</span></div><div class="mini-grid"><div><small>Study streak</small><strong>7 <i>days</i></strong><div class="bars"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div></div><div><small>Confidence</small><strong>Rising <i>↑</i></strong><p class="green">+18% this week</p></div></div></div></div>
+        </div>
+      </section>
+
+      <section class="proof"><div class="shell proof-inner"><p>Less rereading. More remembering.</p><div><span>⌁ Evidence-led practice</span><span>◉ Made for your brain</span><span>↗ Progress you can feel</span></div></div></section>
+
+      <section class="section shell" id="how"><div class="section-heading"><div><div class="eyebrow">THE STUDY LOOP</div><h2>A calmer way to get <em>ahead.</em></h2></div><p>StudySnap replaces the blank-page feeling with a tiny, satisfying loop that compounds every day.</p></div><div class="steps"><article><div class="step-number">01</div><div class="step-icon">⌁</div><h3>Bring your real material</h3><p>Paste notes, upload a PDF, or snap a page. No rebuilding your course from scratch.</p></article><article class="active-step"><div class="step-number">02</div><div class="step-icon">✦</div><h3>Get your focus, instantly</h3><p>AI turns it into the summary, flashcards, and questions that matter most.</p></article><article><div class="step-number">03</div><div class="step-icon">↗</div><h3>Come back stronger</h3><p>Adaptive reviews remember your weak spots and meet you where you are.</p></article></div></section>
+
+      <section class="workspace-section" id="workspace"><div class="shell workspace"><div class="workspace-intro"><div class="eyebrow">YOUR FIRST WIN</div><h2>Make something useful<br /><em>in two minutes.</em></h2><p>Try the experience with sample notes. Your first study pack is free—no account or card needed.</p><div class="benefit-list"><div><span>✓</span><p><strong>Clarity over clutter</strong><small>Know exactly what to study next.</small></p></div><div><span>✓</span><p><strong>Active recall built in</strong><small>Remember more than you reread.</small></p></div><div><span>✓</span><p><strong>Your progress, yours</strong><small>Private, personal, and easy to pick back up.</small></p></div></div></div><div class="generator-card"><div class="card-header"><div><span class="status-dot"></span> Study pack creator</div><span class="free-pill">FREE PREVIEW</span></div><label for="notes">Paste a few notes or try our sample</label><textarea id="notes" placeholder="Paste notes here… e.g. The mitochondria is the powerhouse of the cell because it produces ATP."></textarea><div class="format-row"><button class="format active" data-format="Focus pack">✦ Focus pack</button><button class="format" data-format="Flashcards">▣ Flashcards</button><button class="format" data-format="Quiz">◇ Quiz me</button></div><button class="button button-primary full" id="generate">Create my study pack <span>↗</span></button><div class="result" id="result" hidden><div class="result-title"><span>✦</span> Your focus pack is ready</div><div class="result-content" id="result-content"></div><button class="text-link" data-scroll="pricing">Save this pack and keep your momentum →</button></div></div></div></section>
+
+      <section class="section shell" id="features"><div class="section-heading centered"><div><div class="eyebrow">MORE THAN A SUMMARY</div><h2>Designed for the days<br />motivation <em>runs out.</em></h2></div><p>The best study tool is the one that makes starting feel easy—and returning feel rewarding.</p></div><div class="feature-grid"><article class="feature large"><span class="feature-icon">◌</span><h3>Adaptive, not generic</h3><p>Practice changes with your answers. Spend less time on what you already know and more on what will move your score.</p><div class="mock-chart"><span style="height:35%"></span><span style="height:52%"></span><span style="height:44%"></span><span style="height:72%"></span><span style="height:65%"></span><span style="height:90%"></span></div></article><article class="feature"><span class="feature-icon violet-bg">✦</span><h3>Make it click</h3><p>Ask for an analogy, a simpler explanation, or a harder question without losing your context.</p><div class="quote">“Explain it like I’m teaching a friend.”</div></article><article class="feature"><span class="feature-icon orange-bg">♡</span><h3>A reason to return</h3><p>A gentle daily plan, satisfying streaks, and a clear “next best action”—never guilt or noise.</p><div class="streak">7 <small>day streak</small> <span>✦</span></div></article></div></section>
+
+      <section class="pricing-section" id="pricing"><div class="shell pricing"><div class="eyebrow">INVEST IN YOUR CONFIDENCE</div><h2>Free to start.<br /><em>Worth staying for.</em></h2><p>Try the core loop before you pay. Upgrade when StudySnap becomes part of how you learn.</p><div class="plans"><div class="plan"><h3>Starter</h3><p>For trying a better way to study.</p><div class="price">$0 <small>forever</small></div><ul><li>3 study packs / month</li><li>Summary + flashcards</li><li>7-day progress history</li></ul><button class="button button-outline">Start for free</button></div><div class="plan featured"><div class="popular">MOST LOVED</div><h3>Focus</h3><p>For students who want results that stick.</p><div class="price">$8 <small>/ month</small></div><ul><li>Unlimited study packs</li><li>Adaptive quizzes + reviews</li><li>Full progress & weak-topic map</li><li>PDF, image & export support</li></ul><button class="button button-primary">Start 7-day free trial</button><small class="fine-print">Cancel anytime. No surprise charges.</small></div></div></div></section>
+    </main>
+    <footer class="footer shell"><a class="brand" href="#top"><span class="brand-mark">✦</span> Study<span>Snap</span></a><p>Build confidence, one small study win at a time.</p><span>© 2026 StudySnap</span></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
